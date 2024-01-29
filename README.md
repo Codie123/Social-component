@@ -43,26 +43,13 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 ### What I learned
-I Have learned about css animation , still look deep into it .
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I Have learned about css animation , still looking deep into it .
 
 ### Continued development
-I wanted to focus for a while on css animation 
+I wanted to focus more on css animation 
 it makes the website really awesome ,
-and the way js interact with animation is way awesome .
+and the way js interact with animation is super cool  .
+Looking Forward to learn more .
 
 <!-- ## Author
 
