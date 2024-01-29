@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+    /* Primary colors */
+    --Green: hsl(75, 94%, 57%);
+    /* Neutral colors */
+    --White: hsl(0, 0%, 100%);
+    --cuz-wht: hsl(0 0% 76% / 1);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);
+    --Off-Black: hsl(0, 0%, 8%);
+    /* default font size && font family   */
+    --d-font:0.875em;
+    --F-Inter:"Inter", sans-serif;
+}
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    background-color: var(--Off-Black);
+    color: var(--White);
+    font-size: var(--d-font);
+    font-family: var(--F-Inter);
+}
+main{
+    height: 100vh;
+    display: grid;
+    max-width: 400px;
+    align-items: center;
+    margin-inline: auto;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    animation:  1s cubic-bezier(0.4, 0, 0.2, 1) slideIn;
+    transition:grid-template-rows 500ms;
+}
+@keyframes slideIn{
+    0%{
+        grid-template-columns: 0fr;
+    }
+    100%{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.card{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 15px;
+    background-color: var(--Dark-Grey);
+    overflow: hidden;
+    opacity: 1;
+    /* animation: 2s cubic-bezier(0.4, 0, 0.2, 1) fadeindown ; */
+    
+
+}
+.anim-cnt{
+    padding: 2.5rem;
+    width: 100%;
+    animation: 2s cubic-bezier(0.4, 0, 0.2, 1)  fadeOut ;
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .555%;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.profile-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
+.profile-cnt img {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+ 
+    animation: scale 2s cubic-bezier(0.23, 1, 0.320, 1); /* Specify animation duration and iteration here */
+    transition: transform 1s; /* Add transition for the transform property */
+    transform: scale(.8);
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+        box-shadow: -1px 2px 20px 0px hsl(75deg 94% 57% / 64%);
+    }
+    50% {
+        transform: scale(1);
+        box-shadow: -1px 2px 20px 0px hsla(75, 94%, 57%, 0.998);
+    }
+    100% {
+        transform: scale(.8);
+        box-shadow: -1px 2px 20px 0px hsla(75, 94%, 57%, 0);
+    }
+}
+
+
+
+.profile-cnt h1{
+    font-weight: 500;
+    margin-bottom: .5rem;
+    font-size:1.75em ;
+}
+.profile-cnt p{
+    color: var(--Green);
+    font-weight: 600;
+}
+.desc-cnt{
+    margin-bottom: 1.5rem;
+}
+.desc-cnt p{
+    color: var(--cuz-wht);
+    text-align: center;
+}
+
+.soc-link-cnt{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
+    height: 40vh;
+}
+.cuz-btn{
+    padding: 0.875rem;
+    text-align: center;
+    border-radius: 8px;
+    background: var(--Grey);
+    transition: all .5s ease-in;
+    font-weight: 600;
+    position: absolute;
+    transition: all .5s ease-in;
+}
+
+.cuz-btn:hover{
+    color: var(--Dark-Grey);
+    background-color: var(--Green);
+    font-weight: 700;
+    transition: all .1s ease-out ;
+}
+
+
+/* stacking up position */
+.cuz-btn:nth-child(1){
+    top: 0;
+    left: 0%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.cuz-btn:nth-child(2){
+    top: 0;
+    left: 0%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.cuz-btn:nth-child(3){
+    top: 0;
+    left: 0%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.cuz-btn:nth-child(4){
+    top: 0;
+    left: 0%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.cuz-btn:nth-child(5){
+    top: 0;
+    left: 0%;
+    width: 100%;
+    transition: all 0.5s;
+}
+@media(max-width:426px){
+    .card{
+        max-width: 325px;
+        margin-inline: auto;
+    }
+    .anim-cnt{
+        padding: 2.5rem 2rem;
+    }
+}
+@media(max-width:375px){
+    .card{
+        max-width: 280px;
+    }
+    .anim-cnt{
+        padding: 2.5rem 1.5rem;
+    }
+}
